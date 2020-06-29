@@ -79,13 +79,14 @@ public class Array<E> {
      * @param e     元素
      */
     public void add(int index, E e) {
-        if (size == data.length) {
-            throw new IllegalArgumentException("addLast failed. Array is full");
-        }
-
         //判断索引是否合法
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("addLast failed. ");
+        }
+
+        //扩容
+        if (size == data.length) {
+            resize(data.length * 2);
         }
 
         //插入元素的位置后面的元素向后移动
@@ -191,6 +192,11 @@ public class Array<E> {
         size--;
         data[size] = null;
 
+        //缩容
+        if (size < data.length / 4 && data.length / 2 != 0) {
+            resize(data.length / 2);
+        }
+
         return ret;
     }
 
@@ -222,6 +228,19 @@ public class Array<E> {
         if (index != -1) {
             remove(index);
         }
+    }
+
+    /**
+     * 扩容
+     *
+     * @param newCapacity 新的容量大小
+     */
+    private void resize(int newCapacity) {
+        E[] tempData = (E[]) new Object[newCapacity];
+        for (int i = 0; i < data.length; i++) {
+            tempData[i] = data[i];
+        }
+        data = tempData;
     }
 
     @Override

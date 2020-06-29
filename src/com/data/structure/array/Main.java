@@ -8,20 +8,24 @@ package com.data.structure.array;
 class Main {
 
     public static void main(String[] args) {
-        Array<Integer> arr = new Array<>(20);
+        Array<Integer> arr = new Array<Integer>(10);
         for (int i = 0; i < 10; i++) {
             arr.addLast(i);
         }
-        System.out.println(arr);
 
-        arr.add(3,50);
-        System.out.println(arr);
+        arr.addLast(10);
+        arr.addLast(11);
 
-        arr.addFirst(-10);
         System.out.println(arr);
-
-        arr.remove(3);
-        System.out.println(arr);
+//®
+//        arr.add(3,50);
+//        System.out.println(arr);
+//
+//        arr.addFirst(-10);
+//        System.out.println(arr);
+//
+//        arr.remove(3);
+//        System.out.println(arr);
 
     }
 }
