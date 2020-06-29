@@ -5,7 +5,7 @@ package com.data.structure.array;
  * @Description:
  * @Date: 2020/6/14
  */
-class Array<E> {
+public class Array<E> {
 
     private E[] data;
 
@@ -109,6 +109,24 @@ class Array<E> {
             throw new IllegalArgumentException("Index is illegal");
         }
         return data[index];
+    }
+
+    /**
+     * 获取最后一个元素
+     *
+     * @return 返回结果
+     */
+    public E getLast() {
+        return get(size - 1);
+    }
+
+    /**
+     * 获取第一个元素
+     *
+     * @return 返回结果
+     */
+    public E getFirst() {
+        return get(0);
     }
 
     /**
