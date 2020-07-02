@@ -9,11 +9,23 @@ class Main {
 
     public static void main(String[] args) {
         LinkedList<Integer> linkedList = new LinkedList<>();
-        linkedList.addFirst(1);
-        linkedList.addFirst(2);
-        linkedList.add(1,3);
-        linkedList.add(3,4);
+        for (int i = 0; i < 10; i++) {
+            linkedList.addLast(i);
+            System.out.println(linkedList);
+        }
+
+        linkedList.set(3,20);
         System.out.println(linkedList);
+
+        linkedList.remove(3);
+        System.out.println(linkedList);
+
+        linkedList.removeFirst();
+        System.out.println(linkedList);
+
+        linkedList.removeLast();
+        System.out.println(linkedList);
+
     }
 
 }
