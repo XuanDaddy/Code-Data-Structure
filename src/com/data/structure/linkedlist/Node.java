@@ -5,7 +5,7 @@ package com.data.structure.linkedlist;
  * @Description: 链表节点
  * @Date: 2020/6/29
  */
-class Node<E> {
+public class Node<E> {
 
     //节点中存储的元素
     public E e;

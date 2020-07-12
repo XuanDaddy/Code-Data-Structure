@@ -5,7 +5,7 @@ package com.data.structure.linkedlist;
  * @Description: 链表
  * @Date: 2020/6/29
  */
-class LinkedList<E> {
+public class LinkedList<E> {
 
     //虚拟头节点
     private Node<E> dummyHead;
